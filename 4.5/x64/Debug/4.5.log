@@ -1,0 +1,6 @@
+﻿  4.5.cpp
+D:\MIREA\lauphing-pancake\4.5\4.5.cpp(11,23): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
+D:\MIREA\lauphing-pancake\4.5\4.5.cpp(11,30): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
+D:\MIREA\lauphing-pancake\4.5\4.5.cpp(19,26): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
+D:\MIREA\lauphing-pancake\4.5\4.5.cpp(26,23): warning C4838: Преобразование из "int" в "SHORT" требует сужающего преобразования.
+  4.5.vcxproj -> D:\MIREA\lauphing-pancake\x64\Debug\4.5.exe

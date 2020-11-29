@@ -1,20 +1,33 @@
-﻿// 4.5.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
+﻿#include <iostream>
+#include <conio.h>
+#include <windows.h>
+#include <cstdlib> // Для работы с функцией system()
 
-#include <iostream>
-
+using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n";
+    for (int i = 0; i < 100; i++)
+    {
+        COORD pos = { i , 10 + (int)(10 * sin(double(3.14) / double(12) * double(i))) }; //позиция x и y
+        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleCursorPosition(hConsole, pos);
+
+        cout << "*";
+    }
+    for (int y = 0; y < 20; y++)
+    {
+        COORD pos = { 0, y };
+        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleCursorPosition(hConsole, pos);
+        cout << "|";
+    }
+    for (int x = 0; x < 100; x++)
+    {
+        COORD pos = { x, 10 };
+        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+        SetConsoleCursorPosition(hConsole, pos);
+        cout << "-";
+    }
+
+    cout << endl << endl << endl << endl << endl << endl << endl << endl << endl;
 }
-
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
-
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
